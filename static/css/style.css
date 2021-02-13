@@ -4,46 +4,50 @@
   --blue: hsl(248, 32%, 49%);
   --dark-blue: hsl(249, 10%, 26%);
   --grayish-blue: hsl(246, 25%, 77%);
+  --black-alpha: rgba(0, 0, 0, 0.17);
+  --white: whitesmoke;
   font-size: 16px;
   font-family: 'Poppins', sans-serif;
 }
 body {
   margin: 0px;
-}
-.wrapper {
-  padding: 2em;
   background: var(--red);
   background-image: url('../images/bg-intro-mobile.png');
+}
+.wrapper {
+  width: 300px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
 }
 .hide {
   display: none;
 }
 .message {
   text-align: center;
-  color: whitesmoke;
+  color: var(--white);
   padding: 2.2em 0em;
 }
 .message__content {
   font-size: 0.9em;
-}
-.subscription {
 }
 .subscription__try {
   padding: 1.2em 3em;
   text-align: center;
   font-size: 0.9em;
   background: var(--blue);
-  color: whitesmoke;
+  color: var(--white);
   border-radius: 12px;
-  box-shadow: 0px 8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 8px var(--black-alpha);
   margin: 0.5em 0em;
 }
 .subscription__form {
-  background: whitesmoke;
+  background: var(--white);
   border-radius: 12px;
   margin: 1.5em 0em;
   padding: 1em;
-  box-shadow: 0px 8px rgba(0, 0, 0, 0.17);
+  box-shadow: 0px 8px var(--black-alpha);
 }
 .subscription__form input {
   border: solid 1px var(--grayish-blue);
@@ -62,18 +66,18 @@ body {
   width: 100%;
   box-sizing: border-box;
   background: var(--green);
-  color: whitesmoke;
+  color: var(--white);
   border-radius: 5px;
   border: none;
   font-weight: 700;
 
   text-transform: uppercase;
-  box-shadow: inset 0px -4px rgba(0, 0, 0, 0.17);
+  box-shadow: inset 0px -4px var(--black-alpha);
 }
 .error-message {
   border-radius: 5px;
   background-color: var(--red);
-  color: whitesmoke;
+  color: var(--white);
   padding: 1.2em;
   font-size: 0.8em;
   text-align: center;
@@ -89,4 +93,46 @@ body {
   color: var(--red);
   font-weight: 700;
   text-decoration: none;
+}
+
+@media only screen and (min-width: 1440px) {
+  body {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('../images/bg-intro-desktop.png');
+  }
+  .wrapper {
+    width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+  }
+  .message {
+    padding: 3em;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+  }
+  .message__title {
+    font-size: 3em;
+    line-height: 1em;
+    margin: 0.5em 0em;
+  }
+  .message__content {
+    font-size: 1em;
+  }
+  .subscription {
+    padding: 3em;
+  }
+  .subscription__form {
+    padding: 2.5em;
+  }
+  .subscription__form input {
+    padding: 1.7em;
+  }
 }

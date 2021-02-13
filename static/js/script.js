@@ -18,7 +18,6 @@ const validateEmail = (email) =>
   /[a-zA-Z][a-zA-Z0-9]*@[a-z]+.[a-z]+/.test(email);
 
 const handleClaimTrial = (event) => {
-  console.log('submit');
   event.preventDefault();
   if (!inputFirsthName.value) {
     return showErrorMessage('Firsth Name cannot be empty');
