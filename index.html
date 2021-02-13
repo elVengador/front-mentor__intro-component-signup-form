@@ -18,14 +18,16 @@
     </div>
     <div class="subscription">
       <div class="subscription__try">
-        Try it free 7 days then $20/mo. thereafter
+        <b>Try it free 7 days</b> then $20/mo. thereafter
       </div>
       <div class="subscription__form">
-        <input type="text" placeholder="First Name">
-        <input type="text" placeholder="Last Name">
-        <input type="email" placeholder="Email Address">
-        <input type="password" placeholder="Password">
-        <button>Claim your free trial</button>
+        
+        <input id="firsth-name" type="text" placeholder="First Name">
+        <input id="last-name" type="text" placeholder="Last Name">
+        <input id="email-address" type="email" placeholder="Email Address">
+        <input id="password" type="password" placeholder="Password">
+        <button id="submit-free-trial">Claim your free trial</button>
+        <p id="error-message" class="error-message hide" id="message-error"></p>
         <p class="terms">
           By clicking the button, you are agreeing to our 
           <a class="terms__link" href="#">Terms and Services</a>
@@ -34,4 +36,5 @@
     </div>
   </main>
 </body>
+<script src="./static/js/script.js"></script>
 </html>

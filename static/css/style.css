@@ -15,6 +15,9 @@ body {
   background: var(--red);
   background-image: url('../images/bg-intro-mobile.png');
 }
+.hide {
+  display: none;
+}
 .message {
   text-align: center;
   color: whitesmoke;
@@ -66,6 +69,14 @@ body {
 
   text-transform: uppercase;
   box-shadow: inset 0px -4px rgba(0, 0, 0, 0.17);
+}
+.error-message {
+  border-radius: 5px;
+  background-color: var(--red);
+  color: whitesmoke;
+  padding: 1.2em;
+  font-size: 0.8em;
+  text-align: center;
 }
 .terms {
   text-align: center;
